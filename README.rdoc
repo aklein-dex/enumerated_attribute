@@ -530,6 +530,9 @@ Then specify the input type as enum in the forms:
 
     form.input :gear, :as => :enum
 
+For formtastic ~>2.0.2, follow this link => 
+* https://github.com/jeffp/enumerated_attribute/issues/35
+
 === Implementation Notes
 
 ==== New and Method_missing methods
