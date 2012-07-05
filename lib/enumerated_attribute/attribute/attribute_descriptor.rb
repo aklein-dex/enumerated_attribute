@@ -40,11 +40,7 @@ module EnumeratedAttribute
 				@labels_hash
 			end
 			def select_options
-				if @options.key?(:localize) && @options[:localize]
-					@select_options ||= self.map{|e| [I18n.t(@labels_hash[e]), e.to_s]}
-				else
-					@select_options ||= self.map{|e| [@labels_hash[e], e.to_s]}
-				end
+				@select_options ||= self.map{|e| [label(e), e.to_s]}
 			end
 			def set_label(enum_value, label_string)
 				reset_labels
